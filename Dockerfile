@@ -13,6 +13,17 @@ RUN apt-get update -qqy \
      sudo \
      curl
 
+# Font libraries
+RUN apt-get update -qqy \
+  && apt-get -qqy install \
+    fonts-ipafont-gothic \
+    xfonts-100dpi \
+    xfonts-75dpi \
+    xfonts-cyrillic \
+    xfonts-scalable \
+    ttf-ubuntu-font-family \
+    libfreetype6 \
+    libfontconfig
 
 # Nodejs 6 with npm install
 # https://github.com/nodesource/distributions#installation-instructions
